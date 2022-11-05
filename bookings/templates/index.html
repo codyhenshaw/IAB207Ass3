@@ -24,7 +24,7 @@
                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/600px-Earth_Western_Hemisphere_transparent_background.png"
                      alt="Planet Earth">
                   <div class="align-self-center media-body">
-                     <h5 class="mt-0">Find the best destinations on earth</h5>
+                     <h5 class="mt-0">Find the best ns on earth</h5>
                      <p class="d-none d-sm-block">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
                         scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
                         turpis. Fusce condimentum nunc ac nisi vulputate fringilla.</p>
@@ -35,15 +35,15 @@
          </div>
 
          <div class="card-group">
-            {% for destination in destinations %}
+            {% for booking in bookings %}
             <div class="card mx-3">
                <img class="card-img-top"
-                  src={{destination.image}} alt="destination picture">
+                  src={{booking.image}} alt="booking picture">
                <div class="card-body">
-                  <h5 class="card-title">{{destination.name}}</h5>
-                  <p class="card-text">{{destination.description}}</p>
+                  <h5 class="card-title">{{booking.name}}</h5>
+                  <p class="card-text">{{booking.description}}</p>
                </div>
-               <div class="card-footer"><a href = "{{url_for('destination.show', id=destination.id)}}" class ="btn btn-danger"> View Details </a></div>
+               <div class="card-footer"><a href = "{{url_for('booking.show', id=booking.id)}}" class ="btn btn-danger"> View Details </a></div>
             </div>
             {% endfor %}
          </div>
