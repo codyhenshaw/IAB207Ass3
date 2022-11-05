@@ -8,8 +8,8 @@
     <div class="row mt-5 mb-3">  
       <div class="col-md-12">  
         <div class="float-left">  
-          <h1 class="mb-0">{{destination.name}}</h1>  
-          <p>Popular Destination</p>  
+          <h1 class="mb-0">{{booking.name}}</h1>  
+          <p>Insert Text here</p>  
         </div>  
  
         <div class="float-right text-right">  
@@ -19,17 +19,17 @@
       </div>  
     </div>  
  
-    <!-- Destination --> 
+    <!-- Booking --> 
     <div class="row">  
       <div class="col-md-12">  
         <div class="card my-3">  
           <div class="card-body">  
             <div class="media">  
-              <img class="align-self-start mr-3" src="{{destination.image}}">  
+              <img class="align-self-start mr-3" src="{{booking.image}}">  
               <div class="media-body">  
                 <small class="font-weight-bold text-muted">Stay 2 nights</small>  
-                <h5 class="mt-0">{{destination.name}}</h5>  
-                <p>{{destination.description}}</p>  
+                <h5 class="mt-0">{{booking.name}}</h5>  
+                <p>{{booking.description}}</p>  
                 <a href="#" class="btn btn-danger">Book Now</a>  
               </div>  
             </div>  
@@ -50,8 +50,8 @@
     </div>  
  
     <div class="row border-bottom"> 
-      {{wtf.render_form(form,"/destinations/{0}/comment".format(destination.id))}} 
-      {% for comment in destination.comments %}
+      {{wtf.render_form(form,"/bookings/{0}/comment".format(booking.id))}} 
+      {% for comment in booking.comments %}
       <div class="col-md-12">  
         <b>{{comment.user.name}} <span class="ml-2 text-muted">January 2017</span></b>
         <p>{{comment.text}}</p>  
